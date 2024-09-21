@@ -11,8 +11,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the project...
-      - mkdir output  # Create a directory for final output
-      - cp -R * output/  # Copy all files to the output directory
+      - mkdir -p output  # Create the output directory if it doesn't exist
+      - cp -R index.html output/  # Copy index.html specifically to output
+      # Add more specific copy commands if you have additional files
+      # - cp -R other-file output/  # Example for other files
 
 artifacts:
   files:
