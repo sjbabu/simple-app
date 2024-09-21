@@ -6,17 +6,17 @@ phases:
       nodejs: 14  # Specify your Node.js version
     commands:
       - echo Installing NPM dependencies...
-      - npm install  # Use this if you have dependencies, otherwise skip
+      - npm install  # Use this if you have dependencies
   build:
     commands:
       - echo Build started on `date`
       - echo Building the project...
       - mkdir -p output  # Create the output directory if it doesn't exist
-      - cp -R index.html output/  # Copy index.html specifically to output
-      # Add more specific copy commands if you have additional files
-      # - cp -R other-file output/  # Example for other files
+      - cp -R index.html output/  # Copy index.html to output
+      # Add more files as needed, for example:
+      # - cp -R other-file output/
 
 artifacts:
   files:
     - 'output/**/*'  # Include all files from the output directory
-  base-directory: output  # Use the output directory for artifacts
+  base-directory: output  # Specify the output directory
