@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  # Specify your Node.js version
+    commands:
+      - echo Installing NPM dependencies...
+      - npm install  # Adjust if you have specific dependencies
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the project...
+      # Add your build commands here (if necessary)
+      - cp -R * build/  # Example of copying files to a build directory
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build  # Change if your output is in a different directory
