@@ -6,14 +6,14 @@ phases:
       nodejs: 14  # Specify your Node.js version
     commands:
       - echo Installing NPM dependencies...
-      - npm install  # Use this if you have dependencies; skip if not needed
+      - npm install  # Skip this line if you don’t need npm packages
   build:
     commands:
       - echo Build started on `date`
       - echo Building the project...
       - mkdir -p output  # Create the output directory
       - cp -R index.html output/  # Copy index.html to output
-      - ls output/  # List files in the output directory to verify
+      - ls -R output/  # List files in the output directory to verify
 
 artifacts:
   files:
