@@ -6,14 +6,15 @@ phases:
       nodejs: 14  # Specify your Node.js version
     commands:
       - echo Installing NPM dependencies...
-      - npm install  # Adjust if you have specific dependencies
+      - npm install  # Use this if you have dependencies, otherwise skip
   build:
     commands:
       - echo Build started on `date`
       - echo Building the project...
-      # Add your build commands here (if necessary)
-      - cp -R * build/  # Example of copying files to a build directory
+      - mkdir output  # Create a directory for final output
+      - cp -R * output/  # Copy all files to the output directory
+
 artifacts:
   files:
-    - '**/*'
-  base-directory: build  # Change if your output is in a different directory
+    - 'output/**/*'  # Include all files from the output directory
+  base-directory: output  # Use the output directory for artifacts
