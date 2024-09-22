@@ -62,4 +62,114 @@
         footer {
             text-align: center;
             padding: 20px 0;
-            background: #00
+            background: #007BFF; /* Blue background */
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+        }
+
+        .button {
+            display: inline-block;
+            background: #FFD700; /* Gold button */
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #FFC107; /* Darker gold on hover */
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 30%;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            section {
+                margin: 10px; /* Reduce margin on smaller screens */
+            }
+            .image-gallery img {
+                width: 80%; /* Full width on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Laundry Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Simple Laundry Service, your reliable partner for all your laundry needs. We provide high-quality cleaning and excellent customer service.</p>
+        <a href="#contact" class="button">Get Started</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wash and Fold</li>
+            <li>Dry Cleaning</li>
+            <li>Ironing Services</li>
+            <li>Same-Day Service</li>
+            <li>Stain Removal</li>
+            <li>Delicate Fabric Cleaning</li>
+            <li>Pickup and Delivery</li>
+            <li>Commercial Laundry Services</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Our Work</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1564866657315-82394736d285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGxhdW5kcnl8ZW58MHx8fHwxNjg2OTY5OTM0&ixlib=rb-4.0.3&q=80&w=400" alt="Laundry Service 1">
+            <img src="https://images.unsplash.com/photo-1585295115634-11dc1c4f5ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE0fHxsb3VuZHJ5fGVufDB8fHx8MTY4Njk3MDA3Ng&ixlib=rb-4.0.3&q=80&w=400" alt="Laundry Service 2">
+            <img src="https://images.unsplash.com/photo-1504631244193-4e6e42c0f9b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIyfHxsb3VuZHJ5fGVufDB8fHx8MTY4Njk3MDA5Mw&ixlib=rb-4.0.3&q=80&w=400" alt="Laundry Service 3">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to schedule a pickup, please contact us!</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:info@laundryservice.com">info@laundryservice.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+            <p>Location: 123 Laundry Lane, Clean City, CA</p>
+        </div>
+        <a href="mailto:info@laundryservice.com" class="button">Email Us</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Laundry Service. All rights reserved.</p>
+    </footer>
+</body>
+</html>
