@@ -6,6 +6,6 @@ phases:
       - echo "Building the project"
       - aws s3 sync . s3://hello-world-bucket-sj --exclude ".git/*"
 
- artifacts:
-   files:
-     - '**/*'
+artifacts:
+  files:
+    - '**/*'
